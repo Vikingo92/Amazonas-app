@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from '../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { loginEmailPassword, loginGoogle, loginFacebook } from '../actions/actionLogin'
 
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
-import { BtnFacebook, BtnGoogle, Condiciones, DivStyled } from './styles/Login.styled';
+import { BtnFacebook, BtnGoogle, DivStyled } from './styles/Login.styled';
 
 function Login() {
 
+    const navigate = useNavigate()
+    const dispatch = useDispatch();
+
     const [alert, setAlert] = useState(false);
 
-    const dispatch = useDispatch();
 
     const [values, handleInputChange] = useForm({
         email: '',
@@ -23,8 +25,12 @@ function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault();
+
+        
         dispatch(loginEmailPassword(email, password));
         setAlert(true)
+        
+        
     }
 
     const handleGoogle = () => {

@@ -42,6 +42,15 @@ export const theme = {
         text: '#0E7184',
         link: '#1DA1F2',
         border:'#AAB8C2',
-        shadow: ' rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+        shadow: ' rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+        header:'#131921',
+    },
+    success: {
+        color:'#236969',
+        background:'#74f6a7'
+    },
+    error: {
+        color:'#77204b',
+        background:'#ffaaa5'
     }
 }

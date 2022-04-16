@@ -45,3 +45,10 @@ export const StyledDescription = styled.div`
     }
 
 `
+export const DetailNav = styled.nav`
+    background-color: ${({theme}) => theme.colors.header};
+    padding:1rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+`

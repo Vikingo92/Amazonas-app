@@ -4,18 +4,22 @@ export const StyledHeader = styled.header`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
+    background-color: ${({theme}) => theme.colors.header};
     
 `
 
 export const StyledFilter = styled.div`
     text-align:left;
-    padding:2rem 2rem;
-    
+    padding:0 2rem;
+    display:flex;
+    justify-content:space-between;
 
-    input {
-        border-radius: 10px;
-        margin: 1rem 1rem;
-        padding: 1rem 20rem;
-        padding-left:5px;
+    img {
+        width: 200px;
+        padding: 2rem 2rem;
     }
+    
+    
+   
 `
+
