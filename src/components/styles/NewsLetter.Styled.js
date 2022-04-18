@@ -30,7 +30,7 @@ export const DivForm = styled.section`
         padding: 1rem 15rem;
         padding-left:5px;
         border:none;
-        background-color:#ececec;
+        border: 1px solid ${({theme}) => theme.colors.border};
         
         &:focus {
             outline:none;
@@ -53,7 +53,7 @@ export const MsgSuccess = styled(MsgError)`
     background-color: ${({ theme }) => theme.success.background};
 `
 export const Enviar = styled.button`
-    background-color:#a2a8d3 ;
+    background-color: ${({theme}) => theme.colors.orange} ;
     color: white;
     width: 210px;
     height: 40px;

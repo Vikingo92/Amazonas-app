@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, FacebookAuthProvider } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyA1eznhc8sF2PB-H-NbmgFrtpEwJw_3xG0",
@@ -14,9 +16,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const google = new GoogleAuthProvider();
 const facebook = new FacebookAuthProvider();
+const db = getFirestore();
 
 export {
     app,
     google,
-    facebook
+    facebook,
+    db
 }

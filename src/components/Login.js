@@ -14,6 +14,7 @@ function Login() {
     const dispatch = useDispatch();
 
     const [alert, setAlert] = useState(false);
+    const [validacion, setValidacion] = useState('true')
 
 
     const [values, handleInputChange] = useForm({
@@ -25,12 +26,11 @@ function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault();
-
         
-        dispatch(loginEmailPassword(email, password));
-        setAlert(true)
-        
-        
+            dispatch(loginEmailPassword(email, password));
+            setAlert(true)
+            navigate('/contenido');
+            
     }
 
     const handleGoogle = () => {
